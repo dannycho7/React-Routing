@@ -1,0 +1,8 @@
+html,body{
+  background-color: rgb(25,25,25);
+  color: rgba(255,255,255,0.7);
+}
+#app{
+  text-align: center;
+  padding: 50px;
+}

@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./src/server.js"
+    "start": "babel-node --presets es2015,react ./src/server.js"
   },
   "keywords": [],
   "author": "",
@@ -16,7 +16,7 @@
     "history": "^4.6.1",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "react-router": "^4.0.0"
+    "react-router-dom": "^4.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.24.0",

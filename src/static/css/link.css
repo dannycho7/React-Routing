@@ -1,0 +1,10 @@
+a{
+  text-decoration: none;
+  margin: 5px 15px;
+}
+a:visited{
+  color: rgb(200,155,25);
+}
+a:active, a.active{
+  color: white;
+}
