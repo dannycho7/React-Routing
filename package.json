@@ -1,11 +1,13 @@
 {
-  "name": "test_app",
+  "name": "React-Routing",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "babel-node --presets es2015,react ./src/server.js"
+    "start": "babel-node src/server.js",
+    "production": "node src/production-server.js",
+    "build": "babel src/server.js -o src/production-server.js"
   },
   "keywords": [],
   "author": "",
@@ -13,12 +15,12 @@
   "dependencies": {
     "ejs": "^2.5.6",
     "express": "^4.15.2",
-    "history": "^4.6.1",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-router-dom": "^4.0.0"
   },
   "devDependencies": {
+    "babel-cli": "^6.24.0",
     "babel-core": "^6.24.0",
     "babel-loader": "^6.4.1",
     "babel-preset-es2015": "^6.24.0",
