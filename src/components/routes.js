@@ -1,10 +1,10 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import Layout from './components/Layout'
-import App from './components/App';
-import About from './components/About';
-import Contact from './components/Contact';
-import NotFound from './components/NotFound';
+import Layout from './Layout';
+import App from './App';
+import About from './About';
+import Contact from './Contact';
+import NotFound from './NotFound';
 
 class Routes extends React.Component {
   render() {
