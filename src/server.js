@@ -1,5 +1,6 @@
 import express from 'express';
 import path from 'path';
+import universal from './routes/universal';
 const app = express();
 const port = ( process.env.PORT || 3000 );
 
@@ -14,8 +15,8 @@ app.use((req, res, next) => {
 
 app.use(express.static(path.join(__dirname,'static')));
 
-// universal routing and rendering
-app.use(require('./routes/universal'));
+// universal routing and rendering server-side react components
+app.use(universal);
 
 app.listen(port, () => {
   console.log('Server listening in on port ' + port);
