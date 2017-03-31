@@ -1,6 +1,10 @@
 import express from 'express';
 import path from 'path';
-import universal from './routes/universal';
+import { StaticRouter } from 'react-router-dom';
+import ReactDOMServer from 'react-dom/server';
+import React from 'react';
+import Routes from './components/build/routes';
+import api from './routes/api';
 const app = express();
 const port = ( process.env.PORT || 3000 );
 
@@ -15,8 +19,25 @@ app.use((req, res, next) => {
 
 app.use(express.static(path.join(__dirname,'static')));
 
+//api handler
+app.use('/api', api );
+
 // universal routing and rendering server-side react components
-app.use(universal);
+app.get('*', (req, res) => {
+  var titlePath = 'Danny\'s React App';
+  console.log('GET Request URL: ', req.url);
+  var context = {};
+  var markup = ReactDOMServer.renderToString(
+    <StaticRouter location={req.url} context={context}>
+      <Routes />
+    </StaticRouter>
+  );
+  res.render('index',
+    {
+      path: titlePath,
+      initial_content: markup
+    });
+});
 
 app.listen(port, () => {
   console.log('Server listening in on port ' + port);
