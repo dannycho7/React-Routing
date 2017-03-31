@@ -25,11 +25,7 @@ app.use(function (req, res, next) {
 app.use(_express2.default.static(_path2.default.join(__dirname, 'static')));
 
 // universal routing and rendering
-app.get('*', function (req, res) {
-  var titlePath = 'Danny\'s React App';
-  console.log('GET Request URL: ', req.url);
-  res.render('index', { path: titlePath });
-});
+app.use(require('./routes/universal'));
 
 app.listen(port, function () {
   console.log('Server listening in on port ' + port);
