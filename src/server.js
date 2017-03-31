@@ -3,7 +3,7 @@ import path from 'path';
 import { StaticRouter } from 'react-router-dom';
 import ReactDOMServer from 'react-dom/server';
 import React from 'react';
-import Routes from './components/build/routes';
+import Routes from './components/routes';
 import api from './routes/api';
 const app = express();
 const port = ( process.env.PORT || 3000 );

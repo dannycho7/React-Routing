@@ -5,9 +5,9 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "babel-node src/server.js",
+    "start": "webpack && babel-node src/server.js",
     "production": "node src/production-server.js",
-    "build": "babel src/server.js -o src/production-server.js"
+    "build": "webpack && webpack --config webpack.config.prod.js"
   },
   "keywords": [],
   "author": "",
