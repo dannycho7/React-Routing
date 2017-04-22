@@ -1,2 +1,3 @@
 # React Routing Configuration <br />
-Learning how to configure React front end with Node/Express Backend
+
+React Router setup to serve react components through server with Node/Express backend

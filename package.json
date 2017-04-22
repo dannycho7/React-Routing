@@ -8,8 +8,8 @@
     "start": "babel-node src/server.js",
     "production": "node src/production-server.js",
     "build": "npm run build-components && npm run build-server",
-    "build-components": "webpack",
-    "build-server": "webpack --config webpack.config.prod.js"
+    "build-components": "webpack --config webpack.config.components.js",
+    "build-server": "webpack --config webpack.config.server.js"
   },
   "keywords": [],
   "author": "",
